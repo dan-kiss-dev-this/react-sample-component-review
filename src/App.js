@@ -1,23 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import MyChild from './MyChild'
 
 function App() {
+  const [myNumber, setNumber] = useState(0)
+  const adder = () => setTimeout(() => setNumber(myNumber+1),1000)
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Number is {myNumber}.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <MyChild number={myNumber} setNumber={adder}/>
       </header>
     </div>
   );
