@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import MyChild from './MyChild'
+import GrandChild, { MyChild} from './MyChild'
 
 function App() {
   const [myNumber, setNumber] = useState(0)
@@ -12,7 +12,7 @@ function App() {
         <p>
           Number is {myNumber}.
         </p>
-        <MyChild number={myNumber} setNumber={adder}/>
+        <GrandChild number={myNumber} setNumber={adder}/>
       </header>
     </div>
   );
