@@ -15,7 +15,7 @@ export class MyChild extends React.Component {
     const answer = this.state.answer.toString()
     return (
       <>
-        <div onClick={this.props.setNumber}>hey whats up, the number is {this.props.number}</div>
+        <div onClick={this.props.setNumber}>hey whats up, the number is {this.props.number} click here to increase by 1</div>
         <div onClick={this.changeAnswer}>Answer is {answer}</div>
       </>
     );
