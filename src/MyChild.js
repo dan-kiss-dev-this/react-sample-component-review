@@ -6,7 +6,6 @@ export class MyChild extends React.Component {
     this.changeAnswer = this.changeAnswer.bind(this)
   }
 
-
   changeAnswer() {
     this.setState({ answer: !this.state.answer })
   }
